@@ -1,5 +1,6 @@
 package com.example.projetandroidlouistran
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun GetARecipe(view: View) {}
-    fun GetACocktail(view: View) {}
+    fun getARecipe(view: View) {
+        val intent = Intent(this, RecipePage::class.java)
+        startActivity(intent)
+    }
+    fun getACocktail(view: View) {}
 }

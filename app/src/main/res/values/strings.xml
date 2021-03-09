@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Projet Android Louis TRAN</string>
+    <string name="WelcomeToRecipePage">Welcome to your food app</string>
+    <string name="WelcomeToTheApp">Welcome to my app</string>
+    <string name="WelcomeToCocktailPage">Welcome to the cocktail page</string>
+    <string name="PressToRecipeText">Press the following button to get a food recipe idea for the day.</string>
+    <string name="PressToRecipeButton">Get a recipe</string>
+    <string name="PressToCocktailText">Press the following button to get a cocktail recipe idea for the day </string>
+    <string name="PressToCocktailButton">Get a cocktail</string>
+    <string name="GetARecipe">Get a recipe</string>
 </resources>
