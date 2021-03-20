@@ -13,25 +13,25 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
-class RecipePage : AppCompatActivity(),RecipeBoardView {
+class CocktailActivity : AppCompatActivity(), CocktailRecipeBoardBiew {
     lateinit var recyclerView: RecyclerView
     lateinit var swipeRefresh: SwipeRefreshLayout
-    lateinit var recipePresenter: RecipeBoardPresenter
-    lateinit var itemVideoLinkClick: RecipesAdapter.ItemClick
+    lateinit var recipePresenter: CocktailRecipeBoardPresenter
+    lateinit var itemVideoLinkClick: CocktailRecipesAdapter.ItemClick
     lateinit var mProgressDialog: ProgressDialog
 
-    lateinit var recipes: Recipes
-    lateinit var mRecipeAdapter : RecipesAdapter
+    lateinit var cocktailrecipes: CocktailRecipes
+    lateinit var mRecipeAdapter : CocktailRecipesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recipe_page)
+        setContentView(R.layout.activity_cocktail)
         recyclerView = findViewById(R.id.recycler_view)
         swipeRefresh = findViewById(R.id.swipe_refresh)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
 
-        recipePresenter = RecipeBoardPresenter(this)
+        recipePresenter = CocktailRecipeBoardPresenter(this)
 
 
         recipePresenter.getRecipesData()
@@ -45,10 +45,10 @@ class RecipePage : AppCompatActivity(),RecipeBoardView {
 
         }
 
-        itemVideoLinkClick = object : RecipesAdapter.ItemClick {
+        itemVideoLinkClick = object : CocktailRecipesAdapter.ItemClick {
             override fun onItemClick(view: View, position: Int) {
 
-                val video_link = recipes.meals?.get(position)?.strYoutube
+                val video_link = cocktailrecipes.cocktails?.get(position)?.strVideo
 
                 val uri = Uri.parse("$video_link")
                 val intent = Intent(Intent.ACTION_VIEW,uri)
@@ -61,7 +61,6 @@ class RecipePage : AppCompatActivity(),RecipeBoardView {
 
     }
 
-
     override fun showLoading() {
         swipeRefresh.isRefreshing = true
     }
@@ -70,11 +69,11 @@ class RecipePage : AppCompatActivity(),RecipeBoardView {
         swipeRefresh.isRefreshing =false
     }
 
-    override fun getResult(userList: Recipes?) {
-        mRecipeAdapter = RecipesAdapter(this, userList, itemVideoLinkClick)
+    override fun getResult(userList: CocktailRecipes?) {
+        mRecipeAdapter = CocktailRecipesAdapter(this, userList, itemVideoLinkClick)
         mRecipeAdapter.notifyDataSetChanged()
         recyclerView.adapter = mRecipeAdapter
-        recipes = userList!!
+        cocktailrecipes = userList!!
     }
 
     override fun showProgress() {

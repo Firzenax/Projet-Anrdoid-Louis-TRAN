@@ -15,5 +15,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, RecipePage::class.java)
         startActivity(intent)
     }
-    fun getACocktail(view: View) {}
+    fun getACocktail(view: View) {
+        val intent = Intent(this, CocktailActivity::class.java)
+        startActivity(intent)
+    }
 }

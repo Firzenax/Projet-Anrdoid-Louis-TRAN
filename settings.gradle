@@ -1,2 +1,3 @@
+include ':app:myrecipepage'
 include ':app'
 rootProject.name = "Projet Android Louis TRAN"
