@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+//Creation de deux variable devant représenter les bouton.
     fun getARecipe(view: View) {
         val intent = Intent(this, RecipePage::class.java)
         startActivity(intent)

@@ -9,6 +9,7 @@ class RecipeBoardPresenter(private val view : RecipeBoardView) {
 
     internal fun getRecipesData() {
         view.showLoading()
+//Défini l'interface que cette classe doit utiliser dans ce cas c'est IAPI
 
         val apiInterface = API.apiClient.create(IAPI::class.java)
 

@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/WelcomeToTheApp"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16sp"/>
 
@@ -26,13 +26,14 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/burger"
             android:adjustViewBounds="true"
-            android:layout_marginTop="16sp"/>
+            android:layout_marginTop="16sp"
+            android:contentDescription="TODO" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/PressToRecipeText"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16sp"/>
         <Button
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/PressToCocktailText"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textAlignment="center"
             android:layout_marginTop="16sp"/>
         <Button
@@ -62,7 +63,8 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/logo"
             android:layout_margin="8sp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:contentDescription="TODO" />
 
 
     </LinearLayout>

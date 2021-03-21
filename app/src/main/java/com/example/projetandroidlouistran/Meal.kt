@@ -3,7 +3,7 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Meal {
-
+//Creation des variables qui contiendrons les informations sur le plat a montrer.
     @SerializedName("idMeal")
     @Expose
     var idMeal: String? = null

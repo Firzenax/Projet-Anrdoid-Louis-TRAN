@@ -2,7 +2,7 @@ package com.example.projetandroidlouistran
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-
+// Informations de bases se trouvant les les JSON de l'API TheCocktailDB
 class Cocktail {
     @SerializedName("idDrink")
     @Expose

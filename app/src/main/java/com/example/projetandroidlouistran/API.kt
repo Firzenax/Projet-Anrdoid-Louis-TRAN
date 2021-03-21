@@ -6,8 +6,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object API {
+//    On créer une varirable contenant l'adresse URL de base de l'API
     private val BASE_URL = "https://www.themealdb.com/api/json/v1/1/"
-
+//    Dans le cadre de mon projet j'ai décider d'utiliser Retrofit afin de simplifier la serialisation des informations
     private var retrofit: Retrofit? = null
 
     var client = OkHttpClient()

@@ -12,8 +12,9 @@
         android:permission="I"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjetAndroidLouisTRAN">
-        <activity android:name=".CocktailActivity"></activity>
+        android:theme="@style/Theme.ProjetAndroidLouisTRAN"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity android:name=".CocktailActivity" />
         <activity android:name=".RecipePage" />
         <activity android:name=".MainActivity">
             <intent-filter>

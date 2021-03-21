@@ -6,6 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object CocktailAPI {
+    //    On créer une varirable contenant l'adresse URL de base de l'API
+
     private val BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/"
 
     private var retrofit: Retrofit? = null

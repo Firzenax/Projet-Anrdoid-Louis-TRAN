@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class CocktailActivity : AppCompatActivity(), CocktailRecipeBoardBiew {
+//    On initialise des variables repésentant les élément présent sur la page
     lateinit var recyclerView: RecyclerView
     lateinit var swipeRefresh: SwipeRefreshLayout
     lateinit var recipePresenter: CocktailRecipeBoardPresenter

@@ -7,7 +7,7 @@ import retrofit2.Response
 class CocktailRecipeBoardPresenter(private val view: CocktailActivity) {
     internal fun getRecipesData() {
         view.showLoading()
-
+//Défini l'interface que cette classe doit utiliser dans ce cas c'est CocktailIAPI
         val apiInterface = CocktailAPI.apiClient.create(CocktailIAPI::class.java)
 
         val call = apiInterface.get_Cocktailrecipes
